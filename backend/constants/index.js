@@ -1,0 +1,8 @@
+export const MONGODB = {
+    MONGODB_PASSWORD: 'MONGODB_PASSWORD',
+    MONGODB_USER: 'MONGODB_USER',
+    MONGODB_URL: 'MONGODB_URL',
+    MONGODB_DB: 'MONGODB_DB'
+};
+
+export const PORT = 'PORT';
