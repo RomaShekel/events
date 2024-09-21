@@ -1,0 +1,14 @@
+.eventCard {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    border: solid 1px rgb(136, 136, 218);
+}
+
+.eventCardNav {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,25 @@
+.eventsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 12px;
+    justify-content: center;
+    align-items: center;
+    width: 858px;
+    height: 460px;
+}
+
+.listDiv {
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2px brown;
+    width: 850px !important;
+    margin: 16px auto 32px auto;
+    
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
