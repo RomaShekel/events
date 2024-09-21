@@ -5,6 +5,7 @@ import pino from 'pino-http'
 import { env } from './utils/env.js' 
 import { notFoundRoute } from './middlewares/notFoundRoute.js'
 import { errorMiddleware } from './middlewares/errorMiddleware.js'
+import Routers from './routes/index.js'
 
 const PORT = env('PORT') ? Number(env('PORT')) : 8000;
 
@@ -35,7 +36,7 @@ export const setupServer = () => {
         })
     )
 
-    //app.use(routers)
+    app.use(Routers)
     
     app.use('*', notFoundRoute)
 
