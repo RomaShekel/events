@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL:'http://localhost:8000',
+    baseURL:'https://events-1-nbr4.onrender.com',
 })
 
 export const getAllEvents = async (page = 1, perPage = 12, fields = '') => {
