@@ -1,15 +1,18 @@
 import { EventsCollection } from "../db/models/events.js";
 import createHttpError from "http-errors";
 import { calculatePaginationData } from "../utils/calculatePaginationData.js";
+import { UsersCollection } from "../db/models/users.js";
 
-export const getAllEvents = async ({ page, perPage, order, field}) => {
+export const getAllEvents = async ({ page, perPage, order, name = '', date = '', location = ''}) => {
 
     const eventsCount = await EventsCollection.countDocuments();
 
     const filteredEvents = await EventsCollection.find()
     .skip(perPage * (page - 1))
     .limit(perPage)
-    .sort({ [field]: order })
+    .sort({ [name]: order })
+    .sort({ [date]: order })
+    .sort({ [location]: order })
     .exec()
 
     if (!filteredEvents) {
@@ -23,7 +26,9 @@ export const getAllEvents = async ({ page, perPage, order, field}) => {
         const events = await EventsCollection.find()
         .skip(perPage * (paginationData.totalPage - 1))
         .limit(perPage)
-        .sort({ [field]: order })
+        .sort({ [name]: order })
+        .sort({ [date]: order })
+        .sort({ [location]: order })
         .exec()
 
         return {
@@ -49,6 +54,14 @@ export const getOneEvent = async (id) => {
 export const createEvent = async (payload, userId) => {
     const event = await EventsCollection.create({ ...payload, organizerId: userId })
     if (!event) throw createHttpError(500, 'Error, event was not created!')
+
+    if (payload.userId) {
+        await UsersCollection.findByIdAndUpdate(
+            userId, 
+            { $push: { memberIn: { eventId: event._id, type: 'organizer', from: null } } },
+            { new: true },
+        )
+    }
     
     return event;
 }

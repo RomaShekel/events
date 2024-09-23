@@ -11,7 +11,7 @@ export const EventCard = ({ title, description, eventId}) => {
         
         <nav className={css.eventCardNav}>
             <NavLink to={`/event/${eventId}`}>Register</NavLink>
-            <NavLink>View</NavLink>
+            <NavLink to={`/event/${eventId}/${title}/participants`}>View</NavLink>
         </nav>
         </li>
     )

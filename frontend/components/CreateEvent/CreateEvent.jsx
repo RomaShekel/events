@@ -33,6 +33,10 @@ export const CreateEvent = () => {
                     Date of the Event:
                     <Field name="date" type="date" />
                 </label>
+                <label>
+                    City:
+                    <Field name="location" type="text"/>
+                </label>
 
                 <button type="submit" className={css.submitBtn} >Send</button>
             </Form>

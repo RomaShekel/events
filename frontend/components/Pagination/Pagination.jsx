@@ -1,7 +1,7 @@
 import ReactPaginate from "react-paginate";
 import css from './Pagination.module.css'
 
-export const Pagination = ({ activePage, itemsCountPerPage, pageCount, totalItemsCount, pageChange }) => {
+export const Pagination = ({ setEvents, activePage, itemsCountPerPage, pageCount, totalItemsCount, pageChange }) => {
     return (
         <ReactPaginate
          className={css.pagination}

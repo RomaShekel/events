@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -27,7 +28,8 @@
     "react-dom": "^18.3.1",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.26.2",
-    "toolkit": "^1.5.4"
+    "toolkit": "^1.5.4",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

@@ -1,0 +1,30 @@
+
+.listDiv {
+    border: solid 2px brown;
+    width: 900px;
+    height: 660px;
+    margin: 12px auto;
+    padding: 24px;
+}
+
+.list {
+    gap: 16px 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    width: 850px;
+    flex-wrap: wrap;
+    height: 490px;
+    align-content: flex-start;
+    margin: 16px auto 32px auto;
+}
+
+.item {
+    width: 180px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    border: solid 1px rgb(136, 136, 218);
+}

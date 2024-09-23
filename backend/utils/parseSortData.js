@@ -19,6 +19,8 @@ const parseSortField = (field) => {
         'isCanceled',
         'date',
         'participants',
+        'location',
+        'email'
     ]
 
     if (eventsFields.includes(field)) {
@@ -29,10 +31,12 @@ const parseSortField = (field) => {
 }
 
 export const parseSortData = (query) => {
-    const { order, field } = query;
+    const { order, name, date, location } = query;
 
     return {
         order: parseSortOrder(order),
-        field: parseSortField(field),
+        name: parseSortField(name),
+        date: parseSortField(date),
+        location: parseSortField(location)
     }
 }

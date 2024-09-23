@@ -3,10 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
   height: fit-content;
+  height: 100%;
+  padding-bottom: 32px;
+  background: aliceblue;
+  box-sizing: border-box;
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #e1d8d8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,8 +32,11 @@ body {
   margin: 0;
   display: flex;
   min-width: 320px;
-  margin-top: 72px;
   background-color: aliceblue;
+  padding-top: 72px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 

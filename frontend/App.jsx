@@ -7,6 +7,7 @@ import { EventsList } from './components/EventsList/EventsList.jsx'
 import { RegistrationInEvent } from './components/RegistrationInEvent/RegistrationInEvent.jsx';
 import { LoginPage } from './components/LoginPage/LoginPage.jsx';
 import { SignupPage } from './components/SignupPage/SignupPage.jsx';
+import { ParticipantsList } from './components/ParticipantsList/ParticipantsList.jsx';
 function App() {
 
   return (
@@ -15,8 +16,8 @@ function App() {
     <Routes>
       <Route path='/' element={<EventsList name={'Events'}/>} />
       <Route path='/event/:eventId' element={<RegistrationInEvent/>} />
-      {/* <Route path='/:eventId/participants' element={} /> */}
-      <Route path='/myEvents' element={<EventsList name={'Events where You a participant'}/>} />
+      <Route path='/event/:eventId/:title/participants' element={<ParticipantsList list={"ss"} />} />
+      <Route path='/myEvents' element={<EventsList name={'Events where You are participant'}/>} />
       <Route path='/createEvent' element={<CreateEvent />} />
       <Route path='/login' element={<LoginPage/>} />
       <Route path='/signup' element={<SignupPage/>} />
