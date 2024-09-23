@@ -14,7 +14,6 @@ export const setupServer = () => {
 
     const corsOptions = {
         origin:['http://localhost:5173', 'https://events-theta-two.vercel.app/'],
-        credential: true,
     }
 
     app.use(cors(corsOptions))
