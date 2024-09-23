@@ -13,7 +13,7 @@ export const setupServer = () => {
     const app = express();
 
     const corsOptions = {
-        origin:['http://localhost:5173'],
+        origin:['http://localhost:5173', 'https://events-theta-two.vercel.app/'],
         credential: true,
     }
 
